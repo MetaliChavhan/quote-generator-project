@@ -6,7 +6,7 @@ async function generateQuote(){
    const response = await fetch("https://api.kanye.rest");
    const data = await response.json();
    console.log('data..',data);
-   document.getElementById('quote').textContent = '"$(data.content)" - $(data.author)';
+   document.getElementById('quote').textContent = data.quote;
 }
    
 function shareontwitter(){
